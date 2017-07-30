@@ -38,6 +38,14 @@ abstract class TsInterfaceListener extends ParseTreeListener {
   /// [context] is the parse tree.
   void exitStringExpr(StringExprContext context);
 
+  /// Enter a parse tree produced by [TsInterfaceParser.GenericType].
+  /// [context] is the parse tree.
+   void enterGenericType(GenericTypeContext context);
+
+  /// Exit a parse tree produced by [TsInterfaceParser.GenericType].
+  /// [context] is the parse tree.
+  void exitGenericType(GenericTypeContext context);
+
   /// Enter a parse tree produced by [TsInterfaceParser.keyTypePair].
   /// [context] is the parse tree.
    void enterKeyTypePair(KeyTypePairContext context);
@@ -61,6 +69,14 @@ abstract class TsInterfaceListener extends ParseTreeListener {
   /// Exit a parse tree produced by [TsInterfaceParser.IdExpr].
   /// [context] is the parse tree.
   void exitIdExpr(IdExprContext context);
+
+  /// Enter a parse tree produced by [TsInterfaceParser.LiteralType].
+  /// [context] is the parse tree.
+   void enterLiteralType(LiteralTypeContext context);
+
+  /// Exit a parse tree produced by [TsInterfaceParser.LiteralType].
+  /// [context] is the parse tree.
+  void exitLiteralType(LiteralTypeContext context);
 
   /// Enter a parse tree produced by [TsInterfaceParser.NullExpr].
   /// [context] is the parse tree.

@@ -31,11 +31,13 @@ type:
     | type '[' ']' #ArrayType
     | '{' ((keyTypePair ',')* keyTypePair ','*)* '}' #ObjectType
     | type '|' type #UnionType
+    | ('null'|NUM|STRING) #LiteralType
+    | target=type '<' ((arguments+=type ',')* arguments+=type ','*)? '>' #GenericType
 ;
 
 keyTypePair: comment* ID (':' type)?;
 
-interfaceDecl: comment* 'interface' ID '{' (interfaceField ';'*)* '}';
+interfaceDecl: comment* 'export'? 'interface' ID '{' (interfaceField ';'*)* '}';
 interfaceField: comment* ID QUESTION? ':' type;
 
 exportNamespaceDecl: comment* 'export'? 'namespace' ID '{' (namespaceField ';')* '}';

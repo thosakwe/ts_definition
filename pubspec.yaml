@@ -1,5 +1,5 @@
 name: ts_definition
-version: 1.0.0-alpha+1
+version: 1.0.0-alpha+2
 description: Parse TypeScript interfaces, and generate (de)serializable Dart classes.
 author: Tobe O <thosakwe@gmail.com>
 homepage: https://github.com/thosakwe/ts_definition

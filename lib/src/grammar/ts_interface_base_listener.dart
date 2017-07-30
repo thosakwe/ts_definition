@@ -33,6 +33,12 @@ class TsInterfaceBaseListener implements TsInterfaceListener {
   void exitStringExpr(StringExprContext context) {}
 
   /// The default implementation does nothing.
+  void enterGenericType(GenericTypeContext context) {}
+
+  /// The default implementation does nothing.
+  void exitGenericType(GenericTypeContext context) {}
+
+  /// The default implementation does nothing.
   void enterKeyTypePair(KeyTypePairContext context) {}
 
   /// The default implementation does nothing.
@@ -49,6 +55,12 @@ class TsInterfaceBaseListener implements TsInterfaceListener {
 
   /// The default implementation does nothing.
   void exitIdExpr(IdExprContext context) {}
+
+  /// The default implementation does nothing.
+  void enterLiteralType(LiteralTypeContext context) {}
+
+  /// The default implementation does nothing.
+  void exitLiteralType(LiteralTypeContext context) {}
 
   /// The default implementation does nothing.
   void enterNullExpr(NullExprContext context) {}
