@@ -21,6 +21,8 @@ interface TodoList {
 interface Todo {
     name: string;
 
+    union: string | number;
+
     status: {
         /**
          * The state of this to-do item.
@@ -33,6 +35,7 @@ interface Todo {
 
 let x:Todo = {
     name: 'Hello',
+    union: 'becomes_dynamic',
     status: {
         state: TodoState.COMPLETED
     },

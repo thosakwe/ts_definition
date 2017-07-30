@@ -30,6 +30,7 @@ type:
     ID #SimpleType
     | type '[' ']' #ArrayType
     | '{' ((keyTypePair ',')* keyTypePair ','*)* '}' #ObjectType
+    | type '|' type #UnionType
 ;
 
 keyTypePair: comment* ID (':' type)?;

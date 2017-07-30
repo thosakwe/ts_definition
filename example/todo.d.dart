@@ -15,15 +15,18 @@ class TodoList {
 class Todo {
   String name;
 
+  dynamic union;
+
   TodoStatus status;
 
   List<TodoList> lists;
 
-  Todo({this.name, this.status, this.lists});
+  Todo({this.name, this.union, this.status, this.lists});
 
   static Todo parse(Map map) {
     return new Todo(
         name: map['name'],
+        union: map['union'],
         status: map['status'] is! Map ? null : TodoStatus.parse(map['status']),
         lists: map['lists'] is! Iterable
             ? null
@@ -33,6 +36,7 @@ class Todo {
   Map<String, dynamic> toJson() {
     return {
       'name': name,
+      'union': union,
       'status': status?.toJson(),
       'lists': lists?.map((x) => x.toJson())
     };

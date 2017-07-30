@@ -6,6 +6,14 @@ part of ts_definition.src.grammar;
 /// This abstract class defines a complete listener for a parse tree produced by
 /// [TsInterfaceParser].
 abstract class TsInterfaceListener extends ParseTreeListener {
+  /// Enter a parse tree produced by [TsInterfaceParser.UnionType].
+  /// [context] is the parse tree.
+   void enterUnionType(UnionTypeContext context);
+
+  /// Exit a parse tree produced by [TsInterfaceParser.UnionType].
+  /// [context] is the parse tree.
+  void exitUnionType(UnionTypeContext context);
+
   /// Enter a parse tree produced by [TsInterfaceParser.namespaceField].
   /// [context] is the parse tree.
    void enterNamespaceField(NamespaceFieldContext context);

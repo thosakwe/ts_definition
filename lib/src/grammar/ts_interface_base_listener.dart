@@ -9,6 +9,12 @@ part of ts_definition.src.grammar;
 class TsInterfaceBaseListener implements TsInterfaceListener {
 
   /// The default implementation does nothing.
+  void enterUnionType(UnionTypeContext context) {}
+
+  /// The default implementation does nothing.
+  void exitUnionType(UnionTypeContext context) {}
+
+  /// The default implementation does nothing.
   void enterNamespaceField(NamespaceFieldContext context) {}
 
   /// The default implementation does nothing.
