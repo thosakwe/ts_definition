@@ -6,14 +6,6 @@ part of ts_definition.src.grammar;
 /// This abstract class defines a complete listener for a parse tree produced by
 /// [TsInterfaceParser].
 abstract class TsInterfaceListener extends ParseTreeListener {
-  /// Enter a parse tree produced by [TsInterfaceParser.UnionType].
-  /// [context] is the parse tree.
-   void enterUnionType(UnionTypeContext context);
-
-  /// Exit a parse tree produced by [TsInterfaceParser.UnionType].
-  /// [context] is the parse tree.
-  void exitUnionType(UnionTypeContext context);
-
   /// Enter a parse tree produced by [TsInterfaceParser.namespaceField].
   /// [context] is the parse tree.
    void enterNamespaceField(NamespaceFieldContext context);
@@ -38,13 +30,13 @@ abstract class TsInterfaceListener extends ParseTreeListener {
   /// [context] is the parse tree.
   void exitStringExpr(StringExprContext context);
 
-  /// Enter a parse tree produced by [TsInterfaceParser.GenericType].
+  /// Enter a parse tree produced by [TsInterfaceParser.UnionType].
   /// [context] is the parse tree.
-   void enterGenericType(GenericTypeContext context);
+   void enterUnionType(UnionTypeContext context);
 
-  /// Exit a parse tree produced by [TsInterfaceParser.GenericType].
+  /// Exit a parse tree produced by [TsInterfaceParser.UnionType].
   /// [context] is the parse tree.
-  void exitGenericType(GenericTypeContext context);
+  void exitUnionType(UnionTypeContext context);
 
   /// Enter a parse tree produced by [TsInterfaceParser.keyTypePair].
   /// [context] is the parse tree.
@@ -53,6 +45,14 @@ abstract class TsInterfaceListener extends ParseTreeListener {
   /// Exit a parse tree produced by [TsInterfaceParser.keyTypePair].
   /// [context] is the parse tree.
   void exitKeyTypePair(KeyTypePairContext context);
+
+  /// Enter a parse tree produced by [TsInterfaceParser.GenericType].
+  /// [context] is the parse tree.
+   void enterGenericType(GenericTypeContext context);
+
+  /// Exit a parse tree produced by [TsInterfaceParser.GenericType].
+  /// [context] is the parse tree.
+  void exitGenericType(GenericTypeContext context);
 
   /// Enter a parse tree produced by [TsInterfaceParser.exportNamespaceDecl].
   /// [context] is the parse tree.
@@ -69,6 +69,22 @@ abstract class TsInterfaceListener extends ParseTreeListener {
   /// Exit a parse tree produced by [TsInterfaceParser.IdExpr].
   /// [context] is the parse tree.
   void exitIdExpr(IdExprContext context);
+
+  /// Enter a parse tree produced by [TsInterfaceParser.ExprType].
+  /// [context] is the parse tree.
+   void enterExprType(ExprTypeContext context);
+
+  /// Exit a parse tree produced by [TsInterfaceParser.ExprType].
+  /// [context] is the parse tree.
+  void exitExprType(ExprTypeContext context);
+
+  /// Enter a parse tree produced by [TsInterfaceParser.arrayKeyInterfaceField].
+  /// [context] is the parse tree.
+   void enterArrayKeyInterfaceField(ArrayKeyInterfaceFieldContext context);
+
+  /// Exit a parse tree produced by [TsInterfaceParser.arrayKeyInterfaceField].
+  /// [context] is the parse tree.
+  void exitArrayKeyInterfaceField(ArrayKeyInterfaceFieldContext context);
 
   /// Enter a parse tree produced by [TsInterfaceParser.LiteralType].
   /// [context] is the parse tree.
@@ -125,6 +141,14 @@ abstract class TsInterfaceListener extends ParseTreeListener {
   /// Exit a parse tree produced by [TsInterfaceParser.compilationUnit].
   /// [context] is the parse tree.
   void exitCompilationUnit(CompilationUnitContext context);
+
+  /// Enter a parse tree produced by [TsInterfaceParser.unionTypeDecl].
+  /// [context] is the parse tree.
+   void enterUnionTypeDecl(UnionTypeDeclContext context);
+
+  /// Exit a parse tree produced by [TsInterfaceParser.unionTypeDecl].
+  /// [context] is the parse tree.
+  void exitUnionTypeDecl(UnionTypeDeclContext context);
 
   /// Enter a parse tree produced by [TsInterfaceParser.NumExpr].
   /// [context] is the parse tree.

@@ -1,9 +1,12 @@
+// This comment won't be preserved, because Dart doesn't have union types.
+type DocumentUri = string | null;
+
 export interface InitializeParams {
     processId: number | null;
 
-    rootPath?: string | null;
+    rootPath?: DocumentUri;
 
-    rootUri: string | null;
+    rootUri: DocumentUri;
 
     initializationOptions?: any;
 

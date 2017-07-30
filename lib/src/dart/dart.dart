@@ -1,7 +1,7 @@
 import 'package:dart_style/dart_style.dart';
 import 'package:indenting_buffer/indenting_buffer.dart';
 
-final RegExp _list = new RegExp(r'List<([^>]+)>');
+final RegExp _list = new RegExp(r'^List<([^>]+)>');
 
 class DartLibrary {
   final List<String> imports = [];
@@ -32,7 +32,9 @@ class DartClass {
   final List<DartField> fields = [];
   final String name;
   final DartLibrary lib;
-  String comment;
+  String comment, parentTypeName;
+
+  String generic;
 
   DartClass(this.name, this.lib, {this.comment: '', this.asAbstract: false});
 
@@ -44,8 +46,15 @@ class DartClass {
     else
       buffer.write('class ');
 
+    if (generic != null)
+      buffer.write('$name$generic ');
+    else
+      buffer.write('$name ');
+
+    if (parentTypeName != null) buffer.write('extends $parentTypeName ');
+
     buffer
-      ..write('$name {')
+      ..write('{')
       ..indent();
 
     int i = 0;

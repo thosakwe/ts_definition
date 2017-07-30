@@ -9,12 +9,6 @@ part of ts_definition.src.grammar;
 class TsInterfaceBaseListener implements TsInterfaceListener {
 
   /// The default implementation does nothing.
-  void enterUnionType(UnionTypeContext context) {}
-
-  /// The default implementation does nothing.
-  void exitUnionType(UnionTypeContext context) {}
-
-  /// The default implementation does nothing.
   void enterNamespaceField(NamespaceFieldContext context) {}
 
   /// The default implementation does nothing.
@@ -33,16 +27,22 @@ class TsInterfaceBaseListener implements TsInterfaceListener {
   void exitStringExpr(StringExprContext context) {}
 
   /// The default implementation does nothing.
-  void enterGenericType(GenericTypeContext context) {}
+  void enterUnionType(UnionTypeContext context) {}
 
   /// The default implementation does nothing.
-  void exitGenericType(GenericTypeContext context) {}
+  void exitUnionType(UnionTypeContext context) {}
 
   /// The default implementation does nothing.
   void enterKeyTypePair(KeyTypePairContext context) {}
 
   /// The default implementation does nothing.
   void exitKeyTypePair(KeyTypePairContext context) {}
+
+  /// The default implementation does nothing.
+  void enterGenericType(GenericTypeContext context) {}
+
+  /// The default implementation does nothing.
+  void exitGenericType(GenericTypeContext context) {}
 
   /// The default implementation does nothing.
   void enterExportNamespaceDecl(ExportNamespaceDeclContext context) {}
@@ -55,6 +55,18 @@ class TsInterfaceBaseListener implements TsInterfaceListener {
 
   /// The default implementation does nothing.
   void exitIdExpr(IdExprContext context) {}
+
+  /// The default implementation does nothing.
+  void enterExprType(ExprTypeContext context) {}
+
+  /// The default implementation does nothing.
+  void exitExprType(ExprTypeContext context) {}
+
+  /// The default implementation does nothing.
+  void enterArrayKeyInterfaceField(ArrayKeyInterfaceFieldContext context) {}
+
+  /// The default implementation does nothing.
+  void exitArrayKeyInterfaceField(ArrayKeyInterfaceFieldContext context) {}
 
   /// The default implementation does nothing.
   void enterLiteralType(LiteralTypeContext context) {}
@@ -97,6 +109,12 @@ class TsInterfaceBaseListener implements TsInterfaceListener {
 
   /// The default implementation does nothing.
   void exitCompilationUnit(CompilationUnitContext context) {}
+
+  /// The default implementation does nothing.
+  void enterUnionTypeDecl(UnionTypeDeclContext context) {}
+
+  /// The default implementation does nothing.
+  void exitUnionTypeDecl(UnionTypeDeclContext context) {}
 
   /// The default implementation does nothing.
   void enterNumExpr(NumExprContext context) {}
